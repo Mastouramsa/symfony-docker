@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PublicController!{% endblock %}
+{%block stylesheets%}
+<style>
+div {
+    backgroud-color:#CCC;
+}
+h3 {
+    color:darkblue;
+}
+</style>
+{% block body %}
+{% for article in articles %}
+<div>
+<h1> {{article.title}} </h1>
+<h3> {{article.author}} </h3>
+{{article.date|date("d/m/Y")}}
+</div>
+
+<br>
+{% endfor %}
+{% endblock %}
+{% endblock %}
